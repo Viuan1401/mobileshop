@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 4, 2021, 2:28:17 PM
+    Author     : HP
+*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #9b59b6, #3498db);
+}
+.container{
+    max-width: 500px;
+    width: 100%;
+    background: #FFFAFA;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 5px; 
+}
+.container .title{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container .input-container{
+    width: 100%;
+}
+.container .input-container .input-box{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.container .input-container .input-box .lable-ele{
+    width: 150px;
+    margin-right:  10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.container .input-container .input-box .input,
+.container .input-container .input-box .textarea{
+    width: 100%;
+    outline: none;
+    border: 1px solid gray;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+.container .input-container .input-box .textarea{
+    resize: none;
+    height: 125px;
+}
+.container .input-container .input-box .radio-el{
+   margin-left :  20px;
+}
+.container .input-container .input-box .btn{
+    width: 200px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: linear-gradient( to bottom right, #9b59b6, #3498db);
+    color: white;
+    border-radius: 3px;
+    outline: none;
+}
+.has-error{
+    color: red;
+    display: inline-block;
+}

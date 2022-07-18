@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 4, 2021, 2:27:59 PM
+    Author     : HP
+*/
+.form-login image{
+    margin-top: 2px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient( to bottom left, #fbe706ea, rgb(182, 246, 187));
+} 
+.form-login{
+    width: 300px;
+    height: 400px;
+    background: #EEEEEE;
+    border-radius: 10px;
+    padding: 20px 30px; 
+}
+.input-text{
+    width: 250px;
+    height: auto;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+}
+.input-text > img{
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+}
+.input-text > input{
+    border: none; 
+    outline: none;
+    height: 40px;
+    width: 200px;
+    padding-left: 20px;
+    
+}
+ .loginButton > button {
+    width: 250px;
+    height: 40px;
+    background: linear-gradient( to bottom right,   #fbe706ea, rgb(147, 240, 154));
+    color: black;
+    border: none;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+

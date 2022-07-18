@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="persistenceUnit">
+        <class>com.mobileshop.group5.model.Category</class>
+        <class>com.mobileshop.group5.model.Order</class>
+        <class>com.mobileshop.group5.model.OrderDetail</class>
+        <class>com.mobileshop.group5.model.Product</class>
+        <class>com.mobileshop.group5.model.Role</class>
+        <class>com.mobileshop.group5.model.Member</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:sqlserver://localhost:1433;database=MobileStore"/>
+            <property name="hibernate.connection.driver_class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        </properties>
+    </persistence-unit>
+</persistence>

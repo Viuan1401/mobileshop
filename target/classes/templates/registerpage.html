@@ -1,0 +1,66 @@
+
+
+<html  xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Register Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/register.css">
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <img src="img/The_gioi_di_dong_logo.svg.png" alt="IMG" style="width:400px">
+            </div>  
+            <div class="form-regis">
+
+                <form th:action="@{/register}" th:object="${userForm}" method="POST">
+                    <div class="input-box">
+                        <lable class="details">Full Name</lable>
+                        <input class="input" type="text" name="fullName" th:field="*{fullName}" placeholder="Enter your name" />
+                    </div>
+                    <span class="has-error" th:if="${#fields.hasErrors('fullName')}" th:errors ="*{fullName}"></span>
+
+                    <div class="input-box">
+                        <lable class="details">User Name</lable>
+                        <input class="input" type="text" name="userId" th:field="*{userId}" placeholder="Enter User name" />
+
+                    </div>
+                    <span class="has-error" th:if="${#fields.hasErrors('userId')}" th:errors ="*{userId}"></span>
+
+                    <div class="input-box">
+                        <lable class="details">Email</lable>
+                        <input class="input" type="text" name="email" th:field="*{email}" placeholder="Enter your email" />
+
+                    </div>
+                    <span class="has-error" th:if="${#fields.hasErrors('email')}" th:errors ="*{email}"></span>
+
+                    <div class="input-box">
+                        <lable class="details">Phone Number</lable>
+                        <input class="input" type="text" name="phone" th:field="*{phone}" placeholder="Enter Phone Number" />
+
+                    </div>
+                    <span class="has-error" th:if="${#fields.hasErrors('phone')}" th:errors ="*{phone}"></span>
+
+                    <div class="input-box">
+                        <lable class="details">Password</lable>
+                        <input class="input" type="password" name="password" th:field="*{password}" placeholder="Enter Password" />
+
+                    </div>
+                    <span class="has-error" th:if="${#fields.hasErrors('password')}" th:errors ="*{password}"></span>
+
+                    <div class="input-box">
+                        <lable class="details">Confirm Password</lable>
+                        <input class="input" type="password" name="confirm" th:field="*{passwordComfirm}"placeholder="Enter Password Again" />
+                    </div>
+                    <span class="has-error" th:if="${#fields.hasErrors('passwordComfirm')}" th:errors="*{passwordComfirm}"></span>
+                    <div class="input-box">
+                        <button class="btn" type="submit" value="CreateUser" name="action">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

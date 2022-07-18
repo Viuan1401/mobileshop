@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{Cascading Style Sheets/login.css}"/>
+    
+</head>
+<body>
+<div class="container">
+    <form class="form-login" th:action="@{/spring_login_check}" method="POST" >
+        
+        <img src="image/The_gioi_di_dong_logo.svg.png" alt="IMG" style="width:300px">
+        <span class="has-error" style="color:red;font-weight: bold" th:text="${error}"></span>
+        <div class="input-text">
+            <img src="https://www.vippng.com/png/detail/10-106013_png-file-user-icon-username-logo.png"/>
+            <input type="text"  placeholder="Enter User Name" name="userId"/>
+        </div>
+        <div class="input-text">
+            <img src="https://toppng.com/uploads/preview/this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq6.png"/>
+            <input type="password" name="password" placeholder="Enter Password"/>
+        </div>
+        <div class="form-submit">
+            <div class="loginButton">
+                <button type="submit" value="Login">Login</button>
+            </div>
+            <div class="signup-link">
+                Not a member?<a th:href="@{/register}">Sign Up Here</a>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

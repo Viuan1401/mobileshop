@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 4, 2021, 2:28:32 PM
+    Author     : HP
+*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom right,  #fbe706ea, rgb(182, 246, 187));
+}
+.container{
+    max-width: 500px;
+    width: 100%;
+    background: #FFFAFA;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 5px; 
+}
+.container .title{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container .form-regis{
+    width: 100%;
+}
+.container .form-regis .input-box{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.container .form-regis .input-box .details{
+    width: 150px;
+    margin-right:  10px;
+    font-size: 17px;
+    font-weight: 500;
+    font-weight: bold;
+}
+.container .form-regis .input-box .input{
+    width: 100%;
+    outline: none;
+    border: 1px solid gray;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+.container .form-regis .input-box .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 20px;
+    border: 0;
+    background: linear-gradient( to bottom right,  #fbe706ea, rgb(147, 240, 154));
+    color: black;
+    border-radius: 3px;
+    outline: none;
+    margin-top: 15px;
+   
+}
+.has-error{
+    color: red;
+    display: inline-block;
+}

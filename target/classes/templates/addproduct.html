@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Add Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/Cascading Style Sheets/addproduct.css}">
+</head>
+
+<body>
+<header>
+    <button class="btn logout">
+        <a th:href="@{/logout}">Logout</a>
+    </button>
+</header>
+<form action ="#" th:action="@{/product}" th:object="${product}" method="POST" enctype="multipart/form-data">
+    <div id="add-product">
+        <hr />
+        <div class="field">
+            <span class="field-name">Product Name</span>
+            <input type="text" th:field="*{productName}" id="name"  />
+        </div>
+        <span class="has-error" th:if="${#fields.hasErrors('productName')}" th:errors ="*{productName}"></span>
+        <div class="field">
+            <span class="field-name">Unit Price</span>
+            <input type="number" th:field="*{price}" name="price" />
+
+        </div>
+        <span class="has-error" th:if="${#fields.hasErrors('price')}" th:errors ="*{price}"></span>
+        <div class="field">
+            <span class="field-name">Units In Stock</span>
+            <input type="number" th:field="*{quantity}" value="0" name="quantity" />
+
+        </div>
+        <span class="has-error" th:if="${#fields.hasErrors('quantity')}" th:errors ="*{quantity}"></span>
+        <div class="field">
+            <span class="field-name">Description</span>
+            <label>
+                <textarea th:field="*{description}" id="description" name="description"></textarea>
+
+            </label>
+        </div>
+        <span class="has-error" th:if="${#fields.hasErrors('description')}" th:errors ="*{description}"></span>
+        <div class="field">
+            <span class="field-name">Manufacturer</span>
+            <input type="text" th:field="*{manufacturer}" name="manufacturer" />
+
+        </div>
+        <span class="has-error" th:if="${#fields.hasErrors('manufacturer')}" th:errors ="*{manufacturer}"></span>
+        <div class="field">
+            <span class="field-name">Category</span>
+            <select th:field="*{categoryByCategoryId}">
+                <option th:each="category:${categories}" th:value="${category.categoryId}" th:text="${category.categoryName}"></option>
+
+            </select>
+
+        </div>
+        <span class="has-error" th:if="${#fields.hasErrors('categoryByCategoryId')}" th:errors ="*{categoryByCategoryId}"></span>
+        <div class="field">
+            <label class="lable-ele" required="true" >Condition</label>
+            <input class="radio-el" type="radio" th:field="*{condition}" value="new"/>new
+            <input class="radio-el" type="radio" th:field="*{condition}" value="old"/>old
+            <input class="radio-el" type="radio" th:field="*{condition}" value="refurbished"/>refurbished
+
+        </div>
+        <span class="has-error" th:if="${#fields.hasErrors('condition')}" th:errors ="*{condition}"></span>
+        <div class="field">
+            <label class="col-form-label">Image:</label>
+            <br>
+            <input type="file" name="productImage" accept="image/jpeg, image/png"  id="productImage" />
+            <input type="hidden" th:field="*{image}" >
+        </div>
+        <div class="field">
+            <button class="btn" type="submit"  value="Submit" >Add Product</button>
+
+        </div>
+    </div>
+</form>
+</body>
+</html>
