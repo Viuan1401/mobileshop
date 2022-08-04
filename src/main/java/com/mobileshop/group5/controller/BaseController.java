@@ -53,14 +53,19 @@ public class BaseController {
     @RequestMapping(value = "/")
     public ModelAndView index() {
         List<Product> tblProductsList = this.productService.findAll();
-        return new ModelAndView("productlist", "products", tblProductsList);
+        return new ModelAndView("index", "products", tblProductsList);
+    }
+    @RequestMapping(value ="/search", params = {"name"}, method = RequestMethod.GET)
+    public ModelAndView searchByName(@RequestParam("name") String productName) {
+        List<Product> tblProductsList = this.productService.search(productName);
+        return new ModelAndView("index", "products", tblProductsList);
     }
 
     @RequestMapping(value = "/view", params = {"id"}, method = RequestMethod.GET)
     public ModelAndView searchProduct(@RequestParam("id") Integer productId) {
         Product product = this.productService.findByProductId(productId);
         if (product != null) {
-            return new ModelAndView("viewproduct", "product", product);
+            return new ModelAndView("viewproductp", "product", product);
         }
         return index();
     }

@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c74ba8b-8eb8-4525-b1ea-b0acf8268896" name="Default Changelist" comment="" />
+    <list default="true" id="6c74ba8b-8eb8-4525-b1ea-b0acf8268896" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/CheckOutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/CheckOutService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/UserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/UserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registerpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/viewcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/viewcart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/viewproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/viewproductp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/Config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/Config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/CheckOutService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/CheckOutService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/UserDetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registerpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registerpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/viewcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/viewcart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/viewproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/viewproduct.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +70,7 @@
     <option name="myId2Visible">
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -62,19 +84,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/mobileshop-master/mobileshop-master",
-    "spring.configuration.checksum": "a85d0448a13e2f4f570e8c105c9463df"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/quizonline&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;a85d0448a13e2f4f570e8c105c9463df&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\h3nzy\src\main\java\com\mobileshop\group8\model" />
@@ -134,7 +161,16 @@
       <workItem from="1657676016628" duration="1498000" />
       <workItem from="1657762609222" duration="1805000" />
       <workItem from="1658103513239" duration="1916000" />
-      <workItem from="1658105999522" duration="110000" />
+      <workItem from="1658105999522" duration="1011000" />
+      <workItem from="1658707949188" duration="1060000" />
+      <workItem from="1658963074075" duration="4360000" />
+      <workItem from="1658970970810" duration="5001000" />
+      <workItem from="1658981487132" duration="1165000" />
+      <workItem from="1659446219885" duration="166000" />
+      <workItem from="1659517259589" duration="5498000" />
+      <workItem from="1659535075633" duration="3633000" />
+      <workItem from="1659539041684" duration="11853000" />
+      <workItem from="1659576071555" duration="925000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1634886411422</created>
@@ -178,11 +214,29 @@
       <option name="project" value="LOCAL" />
       <updated>1634976059112</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update none security">
+      <created>1658106262149</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658106262149</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />

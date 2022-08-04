@@ -19,6 +19,9 @@ public class ProductService {
     public List<Product> findByProductName(String productName){
         return this.productRepository.findByProductName(productName);
     }
+    public List<Product> search(String productName){
+        return  this.productRepository.search(productName);
+    }
 
     public Product findByProductId(Integer productId){
         return this.productRepository.findByProductId(productId);

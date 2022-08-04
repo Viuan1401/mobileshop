@@ -38,7 +38,7 @@ public class CheckOutService {
             Order order = new Order();
             order.setDate(new Timestamp((new Date().getTime())));
             order.setTotal(cartBean.getTotal());
-            order.setUserId("admin123");
+            order.setUserId("khang");
             order = orderRepository.save(order);
             if (order.getOrderId()>0){
                 for (Object object : cartBean.values() ){

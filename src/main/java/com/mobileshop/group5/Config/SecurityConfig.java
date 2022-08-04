@@ -1,6 +1,7 @@
 package com.mobileshop.group5.Config;
 
 import com.mobileshop.group5.service.UserDetailService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -42,10 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManager();
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authenticationProvider());
-    }
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -61,7 +59,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .permitAll();*/
-        http.authorizeRequests().antMatchers("/login","/register","/addtocart","/view","/","/removecart","/cart","/checkout","/product").permitAll().
+                http.authorizeRequests().antMatchers("/login","/register","/addtocart","/view","/","/removecart","/cart","/checkout","/product").permitAll().
+
                 and().formLogin()
                 .loginProcessingUrl("/spring_login_check") // Submit URL
                 .loginPage("/login")//
@@ -72,6 +71,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // Cấu hình cho Logout Page.antMatchers("/checkout").hasAnyAuthority("user").
         //                antMatchers("/product").hasAnyAuthority("admin").
 
+
+    }
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+
+
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
 
     }
 

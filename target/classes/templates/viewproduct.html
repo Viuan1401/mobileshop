@@ -2,69 +2,385 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="https://thymeleaf.org/thymeleaf-extras-springsecurity5" lang="en">
 <head>
-    <title>List Product</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-
-    <link rel="stylesheet" th:href="@{Cascading Style Sheets/styles.css}"/>
+    <script src="https://kit.fontawesome.com/62f0458f02.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{Cascading Style Sheets/stylesc.css}">
+    <link rel="stylesheet" th:href="@{Cascading Style Sheets/productview.css}">
+    <title>Thế giới di động</title>
 </head>
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" th:href="@{/}">Mobile Shop</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                <li class="nav-item"><a class="nav-link" sec:authorize="!isAuthenticated()" th:href="@{/login}">Login</a></li>
-                <li class="nav-item"><a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a></li>
-                <li class="nav-item"><a class="nav-link" sec:authorize="hasAuthority('admin')" th:href="@{/product}">Add product</a></li>
+<>
+    <header>
+        <img src="image/hinh1.png" alt="">
+    </header>
+    <nav>
+        <div  class="container">
+            <ul>
+                <li>
+                    <a href=""><img style="width: 150px;" src="image/logo-the-gioi-di-dong-2.jpg" alt=""></a>
+                    <li id="address-form"><a href="#">Hồ Chí Minh <i class="fa-solid fa-sort-down"></i> </a>
+                    </li>
+                    <div class="address-form">
+                        <div class="address-form-content">
+                            <h2>Chọn địa chỉ nhận hàng <span id="address-close">X Đóng</span></h2>
+                            <form action="">
+                                <p>Quý khách vui lòng cho biết Địa Chỉ Nhận Hàng để biết chính xác thời gian giao hàng</p>
+                                <select name="" id="">
+                                    <option value="#">--Chọn địa điểm</option>
+                                    <option value="#">Đà Nẵng</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="#">--Chọn Quận/Huyện</option>
+                                    <option value="#">Đà Nẵng</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="#">--Chọn Phường/Xã</option>
+                                    <option value="#">Đà Nẵng</option>
+                                </select>
+                                <input type="text"placeholder="Số nhà, Tên đường">
+                                <button>Xác nhận</button>
+                            </form>
+                        </div>
+                    </div>
+                    <li><input type="text" placeholder="Bạn tìm gì..."><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><a href=""> <button><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</button></a></li>
+                    <li><a href="">Lịch sử <br> đơn hàng</a></li>
+                    <li><a href=""><span class="btn-content"><span class="btn-top"></span></span>Mua thẻ nạp ngay!</a></li>
+                    <li><a href="">24h công nghệ</a></li>
+                    <li><a href="">Hỏi đáp</a></li>
+                    <li><a href="">Game app</a></li>
+                <li><a sec:authorize="!isAuthenticated()" th:href="@{/login}"> <button><i class="fa-solid fa-right-to-bracket"></i> Login</button></a></li>
+                <li><a sec:authorize="isAuthenticated()" th:href="@{/logout}"> <button><i class="fa-solid fa-right-to-bracket"></i> Logout</button></a></li>
+                <li class="nav-item"><a class="nav-link" sec:authorize="hasAuthority('ADMIN')" th:href="@{/product}">Add product</a></li>
+                </li>
             </ul>
-            <form th:action="@{/cart}" class="d-flex">
-                <button class="btn btn-outline-dark" type="submit" >
-                    <i class="bi-cart-fill me-1"></i>
-                    Cart
-
-                </button>
-            </form>
         </div>
-    </div>
-</nav>
-<!-- Header-->
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-mobile-screen-button"></i> Điện thoại</a></li>
+                    <li><a href=""><i class="fa-solid fa-laptop"></i> Laptop</a></li>
+                    <li><a href=""><i class="fa-solid fa-tablet"></i> Tablet</a></li>
+                    <li><a href=""><i class="fa-solid fa-headphones"></i> Phụ kiện <i style="margin-left: 4px;" class="fa-solid fa-sort-down"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-clock"></i> Đồng hồ</a></li>
+                    <li><a href=""><i class="fa-solid fa-desktop"></i> PC,máy in <i class="fa-solid fa-sort-down"></i></a></li>
+                    <li><a href="">Máy cũ giá rẻ</a></li>
+                    <li><a href="">Sim, thẻ cào</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<!-- Section-->
+   
+
+    <section class="baner-one">
+        <div class="container">
+            <img src="image/baner1.png" alt="">
+        </div>
+    </section>
+<!---------------------phan san pham --------------------- -->    
 <section class="py-5">
     <div class="container px-4 px-lg-5 my-5">
         <div th:object="${product}" class="row gx-4 gx-lg-5 align-items-center" id="productDetail">
 
-            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" th:src="@{image/{url}(url=*{image})}" alt="..." /></div>
             <div class="col-md-6">
-                <div class="small mb-1"><h6 class="detail-tag-text">Item code: </h6> <h6 class="code-text" th:text="*{productId}"></div>
-                <h1 class="display-5 fw-bolder" th:text="*{productName}"/>
-                <div class="fs-5 mb-2">
-                    <span><h6 class="detail-tag-text">Price:</h6> <h6 class="detail-text" th:text="*{price}"/></span>
-                </div>
-                <div class="fs-5 mb-2">
-                    <span><h6 class="detail-tag-text">Category:</h6> <h6 class="detail-text" th:text="*{categoryByCategoryId.categoryName}"></h6></span>
-                </div>
-                <div class="fs-5 mb-2">
-                    <span><h6 class="detail-tag-text">Avalible in stocks:</h6> <h6 class="detail-text" th:text="*{quantity}"/></span>
-                </div>
-                <p class="lead" th:text="*{description}"></p>
-                <div class="d-flex">
+                <section class="slider">
+                    <div class="cointainer">
+                        <div class="slider-content">
+                            <div class="slider-content-left">
+                                <div class="slider-content-left-top-container">
+                                    <div class="slider-content-left-top">
+                                        <a href=""><img th:src="@{image/{url}(url=*{image})}" alt=""></a>
 
-                    <button class="btn btn-outline-dark flex-shrink-0" id="addToCart" type="button" >
-                        <i class="bi-cart-fill me-1"></i>
-                        Add to cart
-                    </button>
-                </div>
+                                        
+                                    </div>
+                                    <div class="slider-content-left-top-btn">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
             </div>
+            <div class="col-md-6">
+                <div class="parameter">
+                    <span class="bth-t">
+                        <span>Xem thêm cấu hình chi tiết</span>
+                </span>
+                    <ul class="parameter__list 235838 active">
+                            <li data-index="0" data-prop="0">
+                                <p class="lileft">Màn hình:</p>
+                                <div class="liright">
+
+                                            <span class="" th:text="*{productName}"></span>
+                                </div>
+                            </li>
+                            <li data-index="0" data-prop="0">
+                                <p class="lileft">Hệ điều hành:</p>
+                                <div class="liright">
+                                            <span class="" th:text="*{manufacturer}"></span>
+                                </div>
+                            </li>
+
+                    </ul>
+                    <div class="small mb-1"><h6 class="detail-tag-text">Mã hàng: </h6> <h6 class="code-text" th:text="*{productId}"></div>
+                        <h1 class="display-5 fw-bolder" th:text="*{productName}"/>
+                        <div class="fs-5 mb-2">
+                            <span><h6 class="detail-tag-text">Giá bán:</h6> <h6 class="detail-text" th:text="*{price}"/></span>
+                        </div>
+                        <div class="fs-5 mb-2">
+                            <span><h6 class="detail-tag-text">Loại:</h6> <h6 class="detail-text" th:text="*{categoryByCategoryId.categoryName}"></h6></span>
+                        </div>
+                        <div class="fs-5 mb-2">
+                            <span><h6 class="detail-tag-text">Có sẵn trong kho:</h6> <h6 class="detail-text" th:text="*{quantity}"/></span>
+                        </div>
+                        <p class="lead" th:text="*{description}"></p>
+                        <div class="d-flex">
+        
+                            <button class="btn btn-outline-dark flex-shrink-0" id="addToCart" type="button" >
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
+                        </div>
+                </div>
+            </div>    
+    
+               
+                
+            
         </div>
     </div>
 </section>
-
-
+<!-- ------------------san pham-------------------------- -->
+    <section class="slider-product-one">
+        <div class="container">
+            <div class="slider-product-one-content">
+                <div class="slider-product-one-content-title">
+                    <h2>Săn Sale Online Mỗi Ngày</h2>
+                </div>
+                <div class="slider-product-one-content-container">
+                    <div class="slider-product-one-content-items-content">
+                        <div class="slider-product-one-content-items">
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone1.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone2.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone3.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone4.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone5.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-product-one-content-items">
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone1.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone2.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone3.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone4.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="image/phone5.jpg" alt="">
+                                <div class="slider-product-one-content-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-product-one-content-btn">
+                        <i class="fa-solid fa-chevron-left fa-solid fa-chevron-left-two"></i>
+                        <i class="fa-solid fa-chevron-right fa-solid fa-chevron-right-two"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- ------------------san pham2-------------------------- -->
+    <section class="product-gallery-one">
+        <div class="container">
+            <div class="product-gallery-one-content">
+                <div class="product-gallery-one-content-title">
+                    <h2>ĐIỆN THOẠI NỔI BẬT NHẤT</h2>
+                    <ul>
+                        <li><a href="">Iphone 13 ProMax</a></li>
+                        <li><a href="">Samsung Galaxy</a></li>
+                        <li><a href="">OPPO Reno7</a></li>
+                        <li><a href="">Nokia G11</a></li>
+                    </ul>
+                </div>
+                <div class="product-gallery-one-content-product">
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p1.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p2.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p3.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p4.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p5.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p6.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p7.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p2.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p4.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                    <div class="product-gallery-one-content-product-item">
+                        <img src="image/p7.jpg" alt="">
+                                <div class="product-gallery-one-content-product-item-text">
+                                    <li><img src="image/logosinhnhat.png" alt=""><p>ƯU ĐÃI SINH NHẬT</p></li>
+                                    <li>SAMSUNG GALAXY A33</li>
+                                    <li>25.000.000 <sup>đ</sup></li>
+                                    <li><p>5 <i class="fa-solid fa-star"></i></p> </li>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="productview.js"></script>
 </body>
 </html>
