@@ -6,26 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6c74ba8b-8eb8-4525-b1ea-b0acf8268896" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/Config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/CheckOutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/CheckOutService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/UserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobileshop/group5/service/UserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registerpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/viewcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/viewcart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/viewproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/viewproductp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/Config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/Config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/controller/BaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/repository/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/CheckOutService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/CheckOutService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mobileshop/group5/service/UserDetailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registerpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registerpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/viewcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/viewcart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/viewproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/viewproduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Cascading Style Sheets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Cascading Style Sheets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addproduct.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +152,9 @@
       <workItem from="1659517259589" duration="5498000" />
       <workItem from="1659535075633" duration="3633000" />
       <workItem from="1659539041684" duration="11853000" />
-      <workItem from="1659576071555" duration="925000" />
+      <workItem from="1659576071555" duration="2802000" />
+      <workItem from="1659873463849" duration="2637000" />
+      <workItem from="1659901652291" duration="3817000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1634886411422</created>
@@ -221,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658106262149</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update none security">
+      <created>1659581459633</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659581459633</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
